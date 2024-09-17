@@ -9,6 +9,9 @@ module.exports = function(eleventyConfig) {
 	// Return your Object options:
 	eleventyConfig.addPassthroughCopy("./src/public");
 	eleventyConfig.addWatchTarget("./public/");
+	eleventyConfig.on('beforeBuild', () => {
+		console.log('Building the site...');
+	  });
 
 	return {
 	  dir: {
