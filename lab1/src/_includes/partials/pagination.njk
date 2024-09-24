@@ -6,14 +6,14 @@
   <h2 id="my-pagination">This is my Pagination</h2>
   <ul class="pagination">
     {# Previous page button #}
-    {% if pagination.href.previous %}<li class="page-item"><a class="page-link" href="{{ pagination.href.previous }}">Previous</a>{% else %}<li class="page-item disabled"><a class="page-link">Previous</a>{% endif %}</li>
+    {% if pagination.href.previous %}<li class="page-item"><a class="page-link" href="{{ baseUrl }}{{ pagination.href.previous }}">Previous</a>{% else %}<li class="page-item disabled"><a class="page-link">Previous</a>{% endif %}</li>
 
     {# Page number buttons #}
 {%- for pageEntry in pagination.pages %}
     {% if page.url == pagination.hrefs[ loop.index0 ] %} 
     <li class="page-item active">
       <a class="page-link" href="{{ pagination.hrefs[ loop.index0 ] }}"
-      {% else %} <li class="page-item"> <a class="page-link" href="{{ pagination.hrefs[ loop.index0 ] }}" 
+      {% else %} <li class="page-item"> <a class="page-link" href="{{ baseUrl }}{{ pagination.hrefs[ loop.index0 ] }}" 
       {% endif %} 
       {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"
       {% endif %}>
@@ -21,6 +21,6 @@
 {%- endfor %}
 
 {# Next page button #}
-    {% if pagination.href.next %}<li class= "page-item"><a class="page-link" href="{{ pagination.href.next }}">Next</a>{% else %}<a class= "page-link disabled">Next</a>{% endif %}</li>
+    {% if pagination.href.next %}<li class= "page-item"><a class="page-link" href="{{ baseUrl }}{{ pagination.href.next }}">Next</a>{% else %}<a class= "page-link disabled">Next</a>{% endif %}</li>
   </ul>
 </nav>
