@@ -1,6 +1,6 @@
 ---
-layout: layouts/default.njk
-permalink: lab_instructions.html
+layout: layouts/default.ejs
+permalink: lab1_instructions.html
 title: Lab 1 Instructions
 ---
 # Lab 1 Instrutions

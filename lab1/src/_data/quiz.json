@@ -1,0 +1,80 @@
+{
+    "quizTitle": "Music Quiz",
+    "totalQuestions": 5,
+    "questions": [
+      {
+        "questionNumber": 1,
+        "picture": "../public/img/image1.png",
+        "alt": "Crisis album cover",
+        "questionText": "What year was this album released?",
+        "options": [
+          "2003",
+          "2006",
+          "1999",
+          "2008"
+        ],
+        "correctAnswer": "2006",
+        "description": "Crisis is the third studio album from Canadian post-hardcore band Alexisonfire, released on August 22, 2006."
+      },
+      {
+        "questionNumber": 2,
+        "picture": "../public/img/rock.png",
+        "alt": "A rock to represent rock music",
+        "questionText": "What rock band got its start in Ajax Ontario?",
+        "options": [
+          "Simple Plan",
+          "Linkin Park",
+          "Sum 41",
+          "Nickelback"
+        ],
+        "correctAnswer": "Sum 41",
+        "description": "Sum 41 is a Canadian rock band from Ajax, Ontario. The band was formed in 1996."
+      },
+      {
+        "questionNumber": 3,
+        "picture": "../public/img/spikey.png",
+        "alt": "Slipknot Member",
+        "questionText": "Which Slipknot member is known for his spikey mask?",
+        "options": [
+          "Craig Jones - Keyboard",
+          "Corey Taylor - Lead Singer",
+          "Mick Thomson - Guitar",
+          "Shawn Crahan - Percussionist"
+        ],
+        "correctAnswer": "Craig Jones - Keyboard",
+        "description": "Craig Jones is the former sampler and keyboardist for Slipknot known for his spikey helmet. He left Slipknot in 2023."
+      },
+      {
+        "questionNumber": 4,
+        "picture": "../public/img/metalband.png",
+        "alt": "League of Legends metal band",
+        "questionText": "What is the metal band that consists of fictional characters from League of Legends called?",
+        "options": [
+          "K/DA",
+          "Heartsteal",
+          "True Damage",
+          "Pentakill"
+        ],
+        "correctAnswer": "Pentakill",
+        "description": "Pentakill is one of 4 bands with real music made 'by' League of Legends characters."
+      },
+      {
+        "questionNumber": 5,
+        "picture": "../public/img/atoma.png",
+        "alt": "Atoma Album Cover",
+        "questionText": "What Swedish metal band released the album 'Atoma'",
+        "options": [
+          "In Flames",
+          "Amon Amarth",
+          "Arch Enemy",
+          "Dark Tranquillity",
+          "Scar Symmetry",
+          "Soilwork",
+          "Opeth"
+        ],
+        "correctAnswer": "Dark Tranquillity",
+        "description": "Atoma is the eleventh studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 4 November 2016."
+      }
+    ]
+  }
+  

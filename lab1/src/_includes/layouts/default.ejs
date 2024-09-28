@@ -1,0 +1,21 @@
+---
+title: Assignment 1
+permalink: index
+---
+<%- include ('../partials/header.ejs') %>
+
+    <div class="container">
+  
+        <div class="col-md-12 ">
+          <%- content %>
+        </div>
+       
+    </div>
+
+
+<%- include ('../partials/footer.ejs') %>
+</html>
+
+<script>
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>

@@ -1,0 +1,39 @@
+@import "colours";
+$buttonPadding: 20px;
+$extraBold: 800;
+
+@mixin importantText{
+    font-weight: $extraBold;
+}
+
+
+
+.submitButton{
+    padding-bottom: $buttonPadding;
+}
+
+#result{
+    @include importantText;
+}
+#description{
+    @include importantText;
+}
+
+body{
+    background-color: $gray;
+}
+
+#peopleList{
+    background-color: $white;
+    padding: 2px;
+    li{
+        border: solid $black 2px;
+        margin: 1px;
+        
+    }
+    li:hover{
+        background-color: $gray;
+        color: $red;
+        @include importantText;
+    }
+}

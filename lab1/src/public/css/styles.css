@@ -1,0 +1,29 @@
+.submitButton {
+  padding-bottom: 20px;
+}
+
+#result {
+  font-weight: 800;
+}
+
+#description {
+  font-weight: 800;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#peopleList {
+  background-color: white;
+  padding: 2px;
+}
+#peopleList li {
+  border: solid #000000 2px;
+  margin: 1px;
+}
+#peopleList li:hover {
+  background-color: lightgray;
+  color: #780b0b;
+  font-weight: 800;
+}/*# sourceMappingURL=styles.css.map */

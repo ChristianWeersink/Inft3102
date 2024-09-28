@@ -1,6 +1,6 @@
 ---
-layout: layouts/default.njk
-permalink: lab1.html
+layout: layouts/default.ejs
+permalink: lab1
 title: Lab 1
 ---
 # Lab 1
@@ -50,6 +50,8 @@ My experience using static site generators has been interesting. It is a complet
 
 ### Decision
 For this project I have decided to go with Nunjucks. They are all fairly similar in over all usage, but Nunjucks supports asynchronous rendering, which may prove useful. From a learners prospective Nunjucks is also a good option, since a lot of the examples on the 11ty website use Nunjucks. Another benefit for me personally is that I have not used it before, so expanding the languages that I am comfortable with will help me improve as a developer.
+
+*After the requirements change to assignment 1, I will be using ejs as my template language since Nunjucks is no longer allowed.*
 
 ## Other Static Site Generators
 Some other static site generators(SSGs) along with Eleventy are:
