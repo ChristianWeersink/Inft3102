@@ -6,24 +6,21 @@ layout: layouts/default.ejs
 title: Favourite Colours and City
 permalink: "people/<%= pagination.pageNumber + 1 %>"
 ---
-<%# 
-  Christian Weersink
-	September 2024
-	Pagination example page with "people"
-  %>
 
 <div class="col-md-6">
-  <h1> <%= title %> </h1>
-  
+  <h1><%= title %></h1>
+
   <ol id="peopleList">
     <% pagination.items.forEach((people) => { %>
-      <li>
-        <%= people.name %>'s Favourite colour is <span style= "background-color: <%= people.colour %>;"><%= people.colour%></span>
-        They live in <%= people.city %>
-        </li>
+    <li>
+      <%= people.name %>'s Favourite colour is
+      <span style="background-color: <%= people.colour %>"
+        ><%= people.colour%></span
+      >
+      They live in <%= people.city %>
+    </li>
     <% }); %>
-    </ol>
+  </ol>
 </div>
 
 <%- include ("./_includes/partials/pagination.ejs") %>
-
