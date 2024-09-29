@@ -4,6 +4,7 @@
 	11ty config
 */
 
+const fs = require('node:fs');
 
 module.exports = function (eleventyConfig) {
 	// Add css and image folders to dist when build happens
@@ -16,6 +17,14 @@ module.exports = function (eleventyConfig) {
 	let baseUrl = env === 'development' ? "" : "/dist";
 	// base url will be placed before each url so links work in both dev and production
 	eleventyConfig.addGlobalData("baseUrl", baseUrl);
+
+	// Delete dist directory before build
+	eleventyConfig.on("eleventy.before", async ({ dir }) => {
+		console.log("Deleting dist");
+		fs.rmSync(dir.output, { recursive: true, force: true });
+	});
+
+	
 
 	// eleventyConfig.addPassthroughCopy({"./node_modules/bootstrap/dist/css/bootstrap.mins.css": "/css/bootstreap.min.css",
 	// "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "/js/bootstreap.bundle.min.js"

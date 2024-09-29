@@ -16,11 +16,12 @@ permalink: "quiz/<%= pagination.pageNumber + 1 %>"
   <div class="row align-items-center">
     <div class="col-md-6">
       <script>
+        // save question data for use in quiz.js
         var question = <%- JSON.stringify(question) %>;
-
       </script>
 
       <form id="quizForm" class="">
+        <!-- Display quiz options -->
         <% question.options.forEach((option) => { %>
           <div class="form-check">
             <input value="<%= option %>" class="option_input form-check-input" type="radio" name="quiz_option" id="<%= option %>">
@@ -28,22 +29,19 @@ permalink: "quiz/<%= pagination.pageNumber + 1 %>"
           </div>
         <% }) %>
         
-        
-        <div class="submitButton"><input id="submitButton" type="submit" class="btn btn-primary" value="Guess"></div>
+        <div class="submitButton">
+          <input id="submitButton" type="submit" class="btn btn-primary" value="Guess">
+        </div>
 
         <div class="col-md-3"><p id="result"></p></div>
         <p id="description"></p>
     </div>
       </form>
       
-     
-
-    <!-- Image in the other column -->
     <div class="col-md-4 text-left">
-      <img class="img-fluid" width="300px"  src="<%= question.picture %>" alt="<%= question.alt %>">
+      <img class="img-fluid" width="300px" src="<%= question.picture %>" alt="<%= question.alt %>">
     </div>
   </div>
-  <hr>
 <% }); %>
 
 <div class="align-items-center"><%- include ("./_includes/partials/pagination.ejs") %></div>
