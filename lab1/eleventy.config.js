@@ -25,7 +25,6 @@ module.exports = function (eleventyConfig) {
 	});
 
 	
-
 	// eleventyConfig.addPassthroughCopy({"./node_modules/bootstrap/dist/css/bootstrap.mins.css": "/css/bootstreap.min.css",
 	// "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "/js/bootstreap.bundle.min.js"
 	// });

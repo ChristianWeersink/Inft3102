@@ -1,4 +1,4 @@
-# My INFT3102-02 Lab 1  
+# My INFT3102-02 Assignment 1
 
 
 Steps to view assignment:
@@ -6,4 +6,4 @@ Steps to view assignment:
 2. npm install
 3. npm run dev
 4. control + click localhost link in terminal
-5. Use the nav link drop down to find the assignment 1 readme
+5. Use the nav link drop down to find the assignment 1 readme or use the links on the home page

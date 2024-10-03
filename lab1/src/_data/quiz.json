@@ -62,7 +62,7 @@
         "questionNumber": 5,
         "picture": "../public/img/atoma.png",
         "alt": "Atoma Album Cover",
-        "questionText": "What Swedish metal band released the album 'Atoma'",
+        "questionText": "What Swedish metal band released the album 'Atoma'?",
         "options": [
           "In Flames",
           "Amon Amarth",
