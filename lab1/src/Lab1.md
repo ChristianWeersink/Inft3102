@@ -1,6 +1,6 @@
 ---
 layout: layouts/default.ejs
-permalink: lab1
+permalink: lab1.html
 title: Lab 1
 ---
 # Lab 1

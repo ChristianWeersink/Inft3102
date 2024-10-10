@@ -18,7 +18,7 @@
       },
       {
         "questionNumber": 2,
-        "picture": "../public/img/rock.png",
+        "picture": "../public/img/music.png",
         "alt": "A rock to represent rock music",
         "questionText": "What rock band got its start in Ajax Ontario?",
         "options": [

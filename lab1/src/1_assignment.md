@@ -1,6 +1,6 @@
 ---
 layout: layouts/default.ejs
-permalink: a1_instructions
+permalink: a1_instructions.html
 ---
 # Assignment 1
 ---

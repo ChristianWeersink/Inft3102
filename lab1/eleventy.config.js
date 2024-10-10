@@ -4,9 +4,15 @@
 	11ty config
 */
 
-const fs = require('node:fs');
+//import ejsPlugin from "@11ty/eleventy-plugin-ejs";
+import ejsPlugin from "@11ty/eleventy-plugin-ejs";
+import fs from "node:fs";
+// const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
 
-module.exports = function (eleventyConfig) {
+
+// const fs = require('node:fs');
+
+export default function (eleventyConfig) {
 	// Add css and image folders to dist when build happens
 	eleventyConfig.addPassthroughCopy("./src/public");
 	// watch css folder for changes
@@ -17,6 +23,7 @@ module.exports = function (eleventyConfig) {
 	let baseUrl = env === 'development' ? "" : "/dist";
 	// base url will be placed before each url so links work in both dev and production
 	eleventyConfig.addGlobalData("baseUrl", baseUrl);
+	eleventyConfig.addPlugin(ejsPlugin);
 
 	// Delete dist directory before build
 	eleventyConfig.on("eleventy.before", async ({ dir }) => {

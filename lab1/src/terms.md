@@ -1,7 +1,7 @@
 ---
 layout: layouts/default.ejs
 title: Terms and Conditions
-permalink: terms
+permalink: terms.html
 ---
 # Terms and Conditions
 

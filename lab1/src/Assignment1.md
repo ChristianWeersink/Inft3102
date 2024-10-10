@@ -1,6 +1,6 @@
 ---
 layout: layouts/default.ejs
-permalink: Assignment1
+permalink: Assignment1.html
 title: Assignment 1 Readme
 ---
 # Assignment 1
@@ -27,7 +27,7 @@ The rest of the project mostly uses Bootstrap classes for styling to display the
 
 ### Pictures used in the quiz were used from these links
 - [Crisis](https://upload.wikimedia.org/wikipedia/en/a/a0/Orig_Crisis_300RGB.jpg)
-- [Rock](https://atlas-content-cdn.pixelsquid.com/stock-images/rock-stone-AvXzl49-600.jpg)
+- [Music Note](https://pixabay.com/images/search/music%20notes/)
 - [Slipknot](https://www.rollingstone.co.uk/wp-content/uploads/sites/2/2021/11/Slipknot2021.png)
 - [League of Legends band](https://afkgaming.com/esports/news/league-of-legends-in-game-band-pentakill-is-back-with-new-album-and-skins)
 - [Atoma Album](https://i.ytimg.com/vi/C_voh9WFbsM/maxresdefault.jpg)

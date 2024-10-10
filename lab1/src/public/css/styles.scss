@@ -6,8 +6,6 @@ $extraBold: 800;
     font-weight: $extraBold;
 }
 
-
-
 .submitButton{
     padding-bottom: $buttonPadding;
 }
@@ -21,6 +19,14 @@ $extraBold: 800;
 
 body{
     background-color: $gray;
+    margin-bottom: 90px;
+    padding-bottom: 10px;
+}
+
+footer{
+    height: 90px;
+    background-color: $darkGray;
+    align-items: center;
 }
 
 #peopleList{
@@ -29,7 +35,6 @@ body{
     li{
         border: solid $black 2px;
         margin: 1px;
-        
     }
     li:hover{
         background-color: $gray;
