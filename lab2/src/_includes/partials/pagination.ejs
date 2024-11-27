@@ -4,7 +4,7 @@
     <%# Previous page button %>
     <% if (pagination.href.previous) { %>
       <li class="page-item">
-        <a class="page-link" href="<%= baseUrl %><%= pagination.href.previous %>">Previous</a>
+        <a class="page-link" href="<%= pagination.href.previous %>">Previous</a>
       </li>
     <% } else { %>
       <li class="page-item disabled">
@@ -18,7 +18,7 @@
       
       %>
       <li class="page-item <%= pagination.pageNumber === index ? 'active' : '' %>">
-        <a class="page-link" href="<%= baseUrl %><%= pagination.links[index] %>"
+        <a class="page-link" href="<%= pagination.links[index] %>"
            <% if (pagination.pageNumber === index) { %> aria-current="page" <% } %>>
           <% if (showTitles && collection && collection[index]) { %>
             <%= collection[index].page_control %> <!-- Show title if available and flag is true -->
@@ -33,7 +33,7 @@
     <%# Next page button %>
     <% if (pagination.href.next) { %>
       <li class="page-item">
-        <a class="page-link" href="<%= baseUrl %><%= pagination.href.next %>">Next</a>
+        <a class="page-link" href="<%= pagination.href.next %>">Next</a>
       </li>
     <% } else { %>
       <li class="page-item disabled">

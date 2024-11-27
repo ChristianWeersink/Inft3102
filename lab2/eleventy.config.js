@@ -22,8 +22,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("baseUrl", baseUrl);
   eleventyConfig.addPlugin(ejsPlugin);
 
-  console.log("DatoCMS API Key:", process.env.DATO_TOKEN);
-
   // Delete dist directory before build
   eleventyConfig.on("eleventy.before", async ({ dir }) => {
     console.log("Deleting dist");
