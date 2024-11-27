@@ -1,0 +1,88 @@
+---
+layout: layouts/default.ejs
+permalink: posts.html
+title: Posts
+---
+
+
+  <h2 class="text-success">Lab and Assignment Posts</h2>
+  <div class="row">
+    <% collections.lab.forEach(post => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><a href="labs/<%= post.permalink %>" class="text-decoration-none text-dark"><%= post.title %></a></h5>
+            <p class="card-text"><%= post.description %></p>
+          </div>
+          <div class="card-footer">
+            <a href="labs/<%= post.permalink %>" class="btn btn-success btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+<hr>
+
+<h2 class="instructions-text">Lab and Assignment Instructions</h2>
+  <div class="row">
+    <% collections.instructions.forEach(post => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><a href="instructions/<%= post.permalink %>" class="text-decoration-none text-dark"><%= post.title %></a></h5>
+            <p class="card-text"><%= post.description %></p>
+          </div>
+          <div class="card-footer">
+            <a href="instructions/<%= post.permalink %>" class="btn instructions-button btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+<hr>
+
+<div class="container my-5">
+  <h2 class="text-primary">Blog Posts</h2>
+  <div class="row">
+    <% collections.blog.forEach(post => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><a href="blogs/<%= post.permalink %>" class="text-decoration-none text-dark"><%= post.title %></a></h5>
+            <p class="card-text"><%= post.description %></p>
+          </div>
+          <div class="card-footer">
+            <a href="blogs/<%= post.permalink %>" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <h2 class="text-center text-secondary">All Posts</h2>
+    <!-- Column 1: Even-indexed posts -->
+    <div class="col-6">
+      <div class="list-group">
+        <% collections.posts.filter((_, index) => index % 2 === 0).forEach(post => { %>
+          <a href="/posts/<%= post.permalink %>" class="list-group-item list-group-item-action">
+            <%= post.title %>
+          </a>
+        <% }); %>
+      </div>
+    </div>
+  
+    <!-- Column 2: Odd-indexed posts -->
+    <div class="col-6">
+      <div class="list-group">
+        <% collections.posts.filter((_, index) => index % 2 !== 0).forEach(post => { %>
+          <a href="/posts/<%= post.permalink %>" class="list-group-item list-group-item-action">
+            <%= post.title %>
+          </a>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>

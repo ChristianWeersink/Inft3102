@@ -1,0 +1,14 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+layout: layouts/default.ejs
+permalink: posts/<%= pagination.items[0].permalink %>.html
+title: All Posts
+---
+
+<%- include ("../_includes/partials/postslayout.ejs") %>
+
+<div class="pagination-controller">
+  <%- include('../_includes/partials/pagination', { pagination: pagination, collection: collections.posts, showTitles: true }) %>
+</div>

@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections.lab
+  size: 1
+layout: layouts/default.ejs
+permalink: "labs/<%= pagination.items[0].permalink %>.html"
+title: All Labs
+---
+
+<%- include ("../_includes/partials/postslayout.ejs") %>
+
+<div class="pagination-controller">
+  <%- 
+  // Show titiles indicates for pagination to show the title of each post on the button controls for pagination
+  include('../_includes/partials/pagination', { pagination: pagination, collection: collections.lab, showTitles: true }) 
+  %>
+</div>

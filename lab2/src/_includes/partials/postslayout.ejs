@@ -1,0 +1,31 @@
+<%
+const paginationData = pagination.items[0];
+%> 
+<h1><%= paginationData.title %></h1>
+<h2><%= paginationData.subtitle %></h2>
+<p class="lab-content">
+  <%= paginationData.postintro %>
+</p>
+<hr>
+<% paginationData.section.forEach((section) =>{ 
+    %>
+    
+<!-- Change layout based on if carousel exists -->
+<div class="row">
+  <div class= <% if (section.carousel != null) { if (section.carousel.images.length > 0) {%>"col-5"<% } }%>>
+    <h3><%= section.title %></h3>
+    <div class="lab-content">
+      <%- section.body %> 
+    </div>
+  </div>
+  <!-- Display carousel if it exists -->
+  <% if (section.carousel != null) { if (section.carousel.images.length > 0) { %>
+  <div class="col-7 carousel-box">
+    <%- include('/partials/carousel', { carouselId:
+    section.carousel.carouselID, images: section.carousel.images }) %>
+  </div>
+<% }
+} %>
+</div>
+<hr>
+<% }); %>

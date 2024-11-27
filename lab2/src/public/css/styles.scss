@@ -1,0 +1,112 @@
+@import "colours";
+$buttonPadding: 20px;
+$extraBold: 800;
+
+@mixin importantText{
+    font-weight: $extraBold;
+}
+
+.submitButton{
+    padding-bottom: $buttonPadding;
+}
+
+#result{
+    @include importantText;
+}
+#description{
+    @include importantText;
+}
+
+body{
+    background-color: $gray;
+    margin-bottom: 90px;
+    padding-bottom: 10px;
+}
+
+footer{
+    height: 90px;
+    background-color: $darkGray;
+    align-items: center;
+}
+
+#peopleList{
+    background-color: $white;
+    padding: 2px;
+    li{
+        border: solid $black 2px;
+        margin: 1px;
+    }
+    li:hover{
+        background-color: $gray;
+        color: $red;
+        @include importantText;
+    }
+}
+
+.carousel-box{
+    height: 500px;
+}
+
+.carousel-caption-below, .carousel-control-prev, .carousel-control-next {
+    color: white;
+    opacity: 100%;
+  }
+
+  
+.carousel-caption-below{
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+.carousel-caption-below h5, .carousel-caption-below p {
+    color: #fff; 
+    opacity: 1; 
+}
+
+.carousel-indicators {
+    margin-bottom: 0px;
+}
+
+.carousel-item{
+    height: 400px;
+}
+.carousel-div {
+    display: flex;
+    height: 400px;
+    align-items: center;
+    
+}
+
+.carousel-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+
+.lab-content{
+    font-size: 1.3rem;
+}
+
+.pagination{
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions-text {
+    color:blueviolet;
+}
+
+.instructions-button {
+    background-color: blueviolet;
+    color: $white;
+}
+
+.instructions-button:hover{
+    background-color: rgb(109, 43, 170);
+    color: $white;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "weersinkc_lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set ELEVENTY_ENV=production && npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve",
+    "dec": "npx @11ty/eleventy --serve",
+    "de": "npx @11ty/eleventy --serve"
+  },
+  "author": "Christian Weersink 100791903",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-ejs": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "node": "^22.11.0",
+    "node-fetch": "^3.3.2"
+  }
+}

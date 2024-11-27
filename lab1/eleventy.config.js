@@ -5,14 +5,12 @@
 */
 
 //import ejsPlugin from "@11ty/eleventy-plugin-ejs";
-import ejsPlugin from "@11ty/eleventy-plugin-ejs";
-import fs from "node:fs";
-// const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
+const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
 
 
-// const fs = require('node:fs');
+const fs = require('node:fs');
 
-export default function (eleventyConfig) {
+module.exports = function (eleventyConfig) {
 	// Add css and image folders to dist when build happens
 	eleventyConfig.addPassthroughCopy("./src/public");
 	// watch css folder for changes

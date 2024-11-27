@@ -1,0 +1,12 @@
+---
+pagination:
+  data: collections.instructions
+  size: 1
+layout: layouts/default.ejs
+permalink: "instructions/<%= pagination.items[0].permalink %>.html"
+title: Instructions
+---
+<%- include ("../_includes/partials/postslayout.ejs") %>
+
+<div class="pagination-controller"><%- include('../_includes/partials/pagination', { pagination: pagination, collection: collections.instructions, showTitles: true }) %>
+</div>

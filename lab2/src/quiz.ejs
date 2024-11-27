@@ -1,0 +1,55 @@
+---
+pagination:
+    data: datoQuiz
+    size: 1
+layout: layouts/default.ejs
+title: Music Quiz!
+permalink: "quiz/<%= pagination.pageNumber + 1 %>.html"
+---
+
+<!-- Quiz Content with Image Side by Side -->
+<h1><%= title %></h1>
+<% //console.log(pagination.items[0])%>
+
+
+<% pagination.items.forEach((question) => { 
+  //console.log(question);
+  %>
+  <h3><%= question.questionText %></h3>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <script>
+        // save question data for use in quiz.js
+        var question = <%- JSON.stringify(question) %>;
+      </script>
+
+      <form id="quizForm" class="">
+        <!-- Display quiz options -->
+        <% 
+        question.options.forEach((option) => { %>
+          <div class="form-check">
+            <input value="<%=option.option%>" class="option_input form-check-input" type="radio" name="quiz_option" id="<%=option.option%>">
+            <label class="option_label form-check-label" for="<%=option.option%>"><%= option.option %></label>
+          </div>
+        <% }) %>
+        
+        <div class="submitButton">
+          <input id="submitButton" type="submit" class="btn btn-primary" value="Guess">
+        </div>
+
+        <div class="col-md-3"><p id="result"></p></div>
+        <p id="description"></p>
+      </form>
+    </div>
+      
+      
+    <div class="col-md-4 text-left">
+      <img class="img-fluid" width="300" src="<%=question.picture%>" alt="<%=question.alt%>">
+    </div>
+  </div>
+<% }); %>
+
+<div class="align-items-center"><%- include('./_includes/partials/pagination', { pagination: pagination, showTitles: false }) %>
+</div>
+
+<script src="../public/js/quiz.js"></script>
