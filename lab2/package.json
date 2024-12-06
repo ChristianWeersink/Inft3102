@@ -18,6 +18,7 @@
     "@11ty/eleventy-plugin-ejs": "^1.0.0",
     "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
+    "mailgun-js": "^0.22.0",
     "node": "^22.11.0",
     "node-fetch": "^3.3.2"
   }

@@ -1,0 +1,128 @@
+---
+layout: layouts/default.ejs
+title: Contact me
+permalink: /contact.html
+---
+
+  
+
+<div >
+    <div class="row text-center">
+      <h1 class="title">Contact Me</h1>
+    </div>
+    <div class="row text-center">
+      <p>Leave your name and email with a message to get in contact with me.</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-3"></div>
+      <form id="contact-form" class="col-lg-6 col-sm-12">
+        <div class="form-group ">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-control"></textarea>
+        </div>
+        <div class="form-group submit-button">
+          <input type="submit" class="btn btn-primary " value="Send">
+        </div>
+        <div class="fa-3x text-center" id="loading-spinner" hidden>
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </div>
+      </form>
+      
+      
+    </div>
+    
+    <div class="row justify-content-center">
+        
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="alert alert-success text-center w-auto mx-auto h-auto" hidden>
+            <p>Email Sent! I will respond as soon as possible.</p>
+        </div>
+        <div class="alert alert-danger text-center w-auto mx-auto h-auto" hidden>
+            <p></p>
+        </div>
+    </div>
+
+    
+    
+</div>
+<script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async (event) => {
+        event.preventDefault();
+  
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+        console.log(JSON.stringify(data));
+  
+        // Select alert divs and spinner
+        const successAlert = document.querySelector(".alert-success");
+        const errorAlert = document.querySelector(".alert-danger");
+        const spinner = document.querySelector(".fa-3x");
+  
+        // Reset alerts
+        successAlert.hidden = true;
+        errorAlert.hidden = true;
+        errorAlert.querySelector("p").textContent = "";
+  
+        // Show spinner while processing
+        spinner.hidden = false;
+  
+        // Basic form validation
+        let valid = true;
+        if (!data.name.trim()) {
+          valid = false;
+          errorAlert.querySelector("p").textContent = "Name is required.";
+          errorAlert.hidden = false;
+        } else if (!data.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+          valid = false;
+          errorAlert.querySelector("p").textContent = "A valid email is required.";
+          errorAlert.hidden = false;
+        } else if (!data.message.trim()) {
+          valid = false;
+          errorAlert.querySelector("p").textContent = "Message is required.";
+          errorAlert.hidden = false;
+        }
+  
+        if (!valid) {
+          spinner.hidden = true;
+          return;
+        }
+  
+        // Try to send the data to the server
+        try {
+          const response = await fetch("/.netlify/functions/mailgun", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+  
+          const result = await response.json();
+          if (response.ok) {
+            successAlert.hidden = false; // Show success message
+          } else {
+            errorAlert.querySelector("p").textContent = result.error || "An error occurred.";
+            errorAlert.hidden = false;
+          }
+        } catch (error) {
+          errorAlert.querySelector("p").textContent =
+            "An unexpected error occurred while submitting the form.\n" +error;
+          errorAlert.hidden = false;
+        } finally {
+          spinner.hidden = true; // Hide spinner after the process
+        }
+      });
+  </script>
+  
