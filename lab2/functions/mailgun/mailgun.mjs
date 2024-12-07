@@ -7,7 +7,7 @@ export default async (request, context) => {
     const mg = mailgun({ apiKey: process.env.MAILGUN, domain: process.env.MAILGUN_DOMAIN });
     const data = {
       from: `${name} <${email}>`,
-      to: "christian.weersink1@gmail.com, christian.weersink@dcmail.ca",
+      to: "christian.weersink@dcmail.ca",
       subject: `Contact Form Submission from ${name}`,
       text: "This is an Automated email.\n"+message,
     };
