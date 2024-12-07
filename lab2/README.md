@@ -1,4 +1,4 @@
-# My INFT3102-02 Assignment 2
+# My INFT3102-02 Assignment 3
 
 
 Steps to view assignment:
@@ -13,3 +13,5 @@ Steps to view assignment:
 For maintenance, check DatoCMS for any content issues, 11ty for any build issues.
 
 For scaling and adding more content types, create a template similar to posts or people.ejs, create a content type on DatoCMS, create a js file in _data to fetch the data, optionally add an 11ty tag in the eleventy.config.js, and then include the data in the new template. 
+
+The mailgun function in the /functions folder sends a request through netilfy to mailgun to send an email to me and Adam 

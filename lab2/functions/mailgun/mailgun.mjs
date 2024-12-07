@@ -1,4 +1,3 @@
-// Docs on request and context https://docs.netlify.com/functions/build/#code-your-function-2
 import mailgun from "mailgun-js";
 
 export default async (request, context) => {
@@ -8,9 +7,9 @@ export default async (request, context) => {
     const mg = mailgun({ apiKey: process.env.MAILGUN, domain: process.env.MAILGUN_DOMAIN });
     const data = {
       from: `${name} <${email}>`,
-      to: "christian.weersink1@gmail.com",
+      to: "christian.weersink1@gmail.com, christian.weersink@dcmail.ca",
       subject: `Contact Form Submission from ${name}`,
-      text: message,
+      text: "This is an Automated email.\n"+message,
     };
 
     await mg.messages().send(data);
